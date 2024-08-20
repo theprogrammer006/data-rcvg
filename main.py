@@ -6,7 +6,9 @@ from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from datetime import datetime
 import os
 
-app=FASTAPI()
+
+app = FastAPI()
+
 DATABASE_URL = os.getenv('DATABASE_URL', 'postgresql+asyncpg://user:password@host/dbname')
 
 # Set up database engine and session
