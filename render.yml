@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: gia-smart-pot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://gia_server_user:Tch6NGGOLgHTo8ppkbeQEQS2lvuQhN9m@dpg-cr0cao88fa8c73d2i1s0-a.oregon-postgres.render.com/gia_server
